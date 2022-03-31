@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/sfe_cw2_api_tester/BuildConfig.java
+ com.example.sfe_cw2_api_tester.BuildConfig
