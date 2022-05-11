@@ -3,6 +3,8 @@ import 'package:sfe_cw2_api_tester/compass_screen.dart';
 import 'package:sfe_cw2_api_tester/fire_index_screen.dart';
 import 'package:sfe_cw2_api_tester/weather_screen.dart';
 
+import 'location.dart';
+
 class HomeScreen extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => InitState();
@@ -83,6 +85,40 @@ class InitState extends State<HomeScreen> {
             ),
           ),
         ),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => LocationPage(),
+                ));
+          },
+          child: Container(
+            alignment: Alignment.center,
+            margin: EdgeInsets.only(left: 20, right: 20, top: 70),
+            padding: EdgeInsets.only(left: 20, right: 20),
+            height: 54,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  colors: [(Colors.green), Colors.green],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight),
+              borderRadius: BorderRadius.circular(50),
+              color: Colors.grey[200],
+              boxShadow: [
+                BoxShadow(
+                    offset: Offset(0, 10),
+                    blurRadius: 50,
+                    color: Color(0xffEEEEEE)),
+              ],
+            ),
+            child: Text(
+              "Location",
+              style: TextStyle(color: Colors.white),
+            ),
+          ),
+        ),
+
         GestureDetector(
           onTap: () {
             Navigator.push(
